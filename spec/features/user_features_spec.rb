@@ -8,3 +8,15 @@ describe 'users index page' do
     end
   end
 end
+
+describe 'registering a user' do
+  it 'confirms user registration' do
+    visit '/users/new'
+    fill_in 'Name here...', with: 'test name'
+    fill_in 'Your email here...', with: 'test1@test.com'
+    click_button 'Notify me'
+    expect(current_path).to eq '/users'
+    expect(page).to have_content "test1@test.com"
+    expect(page).not_to have_content "not signed in"
+  end
+end

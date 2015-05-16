@@ -1,0 +1,18 @@
+<div class="subscribe">
+  <h5 class="form-instruction">
+    Sign up for your early invite. 
+  </h5>
+  <div class="row">
+    <%= form_for @user, class: "form", id: "subscribe-form", role: "form" do |u| %>
+    <div class="line">
+      <%= u.text_field :name, placeholder: 'Name here...', class: 'form-control' %>
+    </div>
+    <div class="line">
+      <%= u.text_field :email, placeholder: 'Your email here...', class: 'form-control'%>
+    </div>
+    <div class="line">
+      <%= u.submit 'Notify me', class: 'btn btn-danger btn-fill' %>
+    </div>
+    <% end %>
+  </div>
+</div>
