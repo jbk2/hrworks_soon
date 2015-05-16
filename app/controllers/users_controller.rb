@@ -16,10 +16,15 @@ class UsersController < ApplicationController
     @user = User.create(params[:user].permit(:name, :email))
 
     if @user.save
-      redirect_to users_path, :notice => 'You have been registered'
+      redirect_to user_path(@user), :notice => 'You have been registered'
     else
-      render 'show'
+      redirect_to '/users/new'
     end
   end
+
+  def show
+    @user = User.find(params[:id])
+  end
+
 
 end
