@@ -1,1 +1,26 @@
-not signed in.
+<div class="main" style="background-image: url('/assets/people.jpg')">
+  <div class="container">
+    <h1>
+      <img alt='the gethr logo' src='/assets/gethr_logo.png' class='logo'>
+    </h1>
+    <div class="content">
+      <h4 class="motto">Manage employees and their benefits, easily.</h4>
+      <h1> index page </h1>
+
+      <!-- must now write in the if statement to render form if not logged in or just normal page if they have -->
+      <%= render 'signup_form' %>
+
+      
+      
+    </div>
+  </div>
+</div>
+
+
+<!-- <% if @users.any? %>
+        <% @users.each do |u| %>
+          <%= u.email %>
+        <% end %>
+      <% else %>
+        not signed in
+      <% end %> -->

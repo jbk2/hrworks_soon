@@ -13,3 +13,116 @@
  *= require_tree .
  *= require_self
  */
+
+    
+
+/*           Navigation Bar             */
+
+.navbar-nav > li > a {
+    margin-top: 13px;
+    margin-bottom: 13px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    font-size: 13px;
+    color: #FFFFFF;
+    /*width: 100px;*/
+}
+.navbar-nav > li > a [class^="fa"]{
+    font-size: 22px;
+}
+
+/*          Content                       */
+
+body {
+  font-family: 'Lato', sans-serif;
+  /*font-style: italic;*/
+  /*font-weight: lighter;*/
+}
+
+.cover.black{
+    background-color: rgba(0,0,0,.6);
+}
+.cover.blue{
+    background-color: rgba(5, 31, 60, 0.6);
+}
+.cover.green{
+    background-color: rgba(3, 28, 7, 0.6);
+}
+.cover.orange{
+    background-color: rgba(37, 28, 5, 0.6);
+}
+.cover.red{
+    background-color: rgba(35, 3, 2, 0.66);
+}
+
+.main{
+   /* font-family: 'Roboto Condensed', sans-serif;*/
+    background-position: center center;
+    background-size: cover;
+    height: auto;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    width: auto;
+    text-align: center;
+}
+
+.main .logo {
+    height: 230px;
+    width: 180px;
+}
+
+.main .content{
+    position: relative;
+    z-index: 4;
+}
+
+.motto {
+    font-family: 'Merriweather', serif;
+    min-height: 60px;
+    font-size: 28px;
+    color: #FFFFFF;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.33);
+    text-align: center;
+    margin-top: 65px;
+}
+
+/*          Subscription Form */
+
+.main .subscribe {
+    color: #FFFFFF;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.33);
+    text-align: center;
+    margin-top: 40px;
+}
+
+.form-instruction {
+    font-size: 13px;
+}
+
+.btn {
+    font-size: 13px;
+}
+
+form {
+    display: inline-block;
+    float: center;
+    clear: center;
+    width: auto;
+    text-align: center;
+}
+
+form .line {
+    margin-bottom: 3px;
+}
+
+/*@media (max-width: 200px) {
+  .main {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+*/
