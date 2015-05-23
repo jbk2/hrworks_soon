@@ -25,8 +25,17 @@
     padding-top: 12px;
     font-size: 13px;
     color: #FFFFFF;
+    background-color: transparent;
+    /*opacity: 1;*/
     /*width: 100px;*/
 }
+
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+    /*opacity: 0;*/
+    background-color: transparent;
+    /*color: #FFFFFF;*/
+}
+
 .navbar-nav > li > a [class^="fa"]{
     font-size: 22px;
 }
