@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>gethr.io</title>
+    <title>hrworks.co</title>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -14,29 +14,33 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Lato|Merriweather' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
-
   </head>
   
   <body>
-  
     <nav class="navbar navbar-transparent navbar-fixed-top" role="navigation">  
       <div class="container">
-      <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="#"> 
-                <i class="fa fa-envelope-o"></i>
-                  Contact Us
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul class="nav navbar-nav navbar-right pull-right">
+          <li>
+            <a href="mailto:hello@hrworks.co"> 
+              <i class="fa fa-envelope-o"></i>
+                Contact Us
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
+    
+    <div class="header" style="background-image: url('/assets/people.jpg')">
+      <div class="container">
+        <a href="http://www.gethr.io">
+          <img alt='the gethr logo' src='/assets/gethr_logo.png' class='logo'>
+        </a>
+        <h3 class="motto">Better benefits and hr experiences.</h3>      
+      </div>
 
-    <%= yield %>
+      <%= yield %>
 
+    </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->

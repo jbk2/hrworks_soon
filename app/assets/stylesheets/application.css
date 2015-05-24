@@ -14,9 +14,7 @@
  *= require_self
  */
 
-    
-
-/*           Navigation Bar             */
+/*              Nav bar             */
 
 .navbar-nav > li > a {
     margin-top: 13px;
@@ -26,21 +24,17 @@
     font-size: 13px;
     color: #FFFFFF;
     background-color: transparent;
-    /*opacity: 1;*/
-    /*width: 100px;*/
 }
 
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
-    /*opacity: 0;*/
     background-color: transparent;
-    /*color: #FFFFFF;*/
 }
 
 .navbar-nav > li > a [class^="fa"]{
     font-size: 22px;
 }
 
-/*          Content                       */
+/*              Copy styles             */
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -88,23 +82,9 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
     font-size: 60%;
 }
 
-.cover.black{
-    background-color: rgba(0,0,0,.6);
-}
-.cover.blue{
-    background-color: rgba(5, 31, 60, 0.6);
-}
-.cover.green{
-    background-color: rgba(3, 28, 7, 0.6);
-}
-.cover.orange{
-    background-color: rgba(37, 28, 5, 0.6);
-}
-.cover.red{
-    background-color: rgba(35, 3, 2, 0.66);
-}
+/*              Content             */
 
-.main{
+.header{
     background-position: center center;
     background-size: cover;
     height: auto;
@@ -117,45 +97,41 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
     text-align: center;
 }
 
-.main .logo {
+.logo {
     height: 230px;
     width: 180px;
     margin-top: 20px;
 }
 
-.main .content{
-    position: relative;
-    z-index: 4;
-}
-
 .motto {
     font-family: 'Merriweather', serif;
-    min-height: 60px;
-    /*font-size: 28px;*/
     color: #FFFFFF;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.33);
     text-align: center;
-    margin-top: 65px;
+    margin-top: 60px;
 }
 
 /*          Subscription Form */
 
-.main .subscribe {
+.subscribe {
     color: #FFFFFF;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.33);
     text-align: center;
-    margin-top: 25px;
+    margin-top: 45px;
     font-family: 'Lato', sans-serif;
-    font-size: 3px;
+    /*font-size: 38px;*/
+    /*position: absolute;
+    background-position: center center;
+    background-size: cover;*/
 }
 
 .form-instruction {
-    font-size: 13px;
+    font-size: 15px;
 }
 
-.form-control {
+/*.form-control {
     font-size: 13px;
-}
+}*/
 
 .btn {
     font-size: 13px;
@@ -173,12 +149,3 @@ form .line {
     margin-bottom: 3px;
     /*font-size: 3px;*/
 }
-
-/*@media (max-width: 200px) {
-  .main {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-*/
