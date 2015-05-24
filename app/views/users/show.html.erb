@@ -1,5 +1,4 @@
 <!-- must now write in the if statement to render form if not logged in or just normal page if they have -->
 <div class="main below-logo">
-  <h5> Welcome <%= @user.name %>, early access to hrworks.co is on <br>its way to you shortly.</h5>
+  <h5> <%= greet(Time.new.hour) %> <%= @user.name %>, early access to hrworks.co is on <br>its way to you shortly.</h5>
 </div>
-
