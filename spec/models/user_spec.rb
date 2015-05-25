@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 describe User do
+  # before do
+  #   user = create(:user)
+  # end
   it 'creating a user instance without a name' do
     user = User.new(name: nil)
     expect(user).to have(2).errors_on(:name)
