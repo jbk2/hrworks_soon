@@ -8,6 +8,11 @@ module UsersHelper
     else
       "Evening"
     end
+    # raise hour_of_clock.inspect
+  end
+
+  def first_name(name)
+    name.split(' ')[0].capitalize
   end
 
 end

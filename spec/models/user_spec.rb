@@ -13,7 +13,7 @@ describe User do
 
   it 'creating a user instance without an email address' do
     user = User.new(name: 'abc', email: nil)
-    expect(user).to have(2).errors_on(:email)
+    expect(user).to have(3).errors_on(:email)
   end
 
   it 'creating a user instance with an invalid email address' do

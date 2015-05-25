@@ -2,12 +2,12 @@
 
   <% if @user.errors.any? %>
     <div id="error_explanation">
-      <h4><%= pluralize(@user.errors.count, 'error') %> stopped this user from being saved:</h4>
-      <ul>
+      <h5><%= pluralize(@user.errors.count, 'error') %> stopped this user from being saved:</h5>
+      <!-- <ul> -->
       <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <%= msg %><br>
       <% end %>
-      </ul>
+    
     </div>
   <% end %>
 
@@ -18,10 +18,10 @@
   <div class="row">
     <%= form_for @user, class: "form", id: "subscribe-form", role: "form" do |u| %>
     <div class="line">
-      <%= u.text_field :name, placeholder: 'Name here...', class: 'form-control' %>
+      <%= u.text_field :name, placeholder: 'Name here...', class: 'form-control', required: true %>
     </div>
     <div class="line">
-      <%= u.text_field :email, placeholder: 'Your email here...', class: 'form-control' %>
+      <%= u.text_field :email, placeholder: 'Your email here...', class: 'form-control', required: true %>
     </div>
     <div class="line">
       <%= u.submit 'Notify me', class: 'btn btn-danger btn-fill' %>
