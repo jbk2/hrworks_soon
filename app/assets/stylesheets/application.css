@@ -129,6 +129,16 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
     font-size: 15px;
 }
 
+ul {
+    list-style-position: inside;
+    /*width:300px;*/
+    /*margin:0 auto;*/
+    /*text-align:center;*/
+    /*list-style-type: none;*/
+    /*text-align: center;*/
+    /*position: center;*/
+}
+
 /*.form-control {
     font-size: 13px;
 }*/

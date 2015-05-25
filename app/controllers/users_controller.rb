@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to user_path(@user), :notice => 'You have been registered'
     else
-      redirect_to '/users/new'
+      render '/users/new'
     end
   end
 

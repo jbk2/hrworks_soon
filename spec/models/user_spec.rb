@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 describe User do
-  it 'creating a user instance with no name' do
+  it 'creating a user instance without a name' do
     user = User.new(name: nil)
     expect(user).to have(2).errors_on(:name)
   end
 
-  it 'creating a user instance with a 2 char name' do
+  it 'creating a user instance with name of <3 chars' do
     user = User.new(name: 'ab')
     expect(user).to have(1).errors_on(:name)
   end
