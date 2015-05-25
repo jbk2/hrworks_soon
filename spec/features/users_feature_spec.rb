@@ -34,19 +34,19 @@ describe 'registering a user' do
 end
 
 describe 'greeting a newly registered user' do
-  let!(:fake_hour) { '11' }
-  before do 
-    allow(Time.now).to receive(:hour).and_return(fake_hour)  
-  end
+  # let!(:fake_hour) { '11' }
+  # before do 
+  #   allow(Time.now).to receive(:hour).and_return(fake_hour)  
+  # end
   
-  it 'tailors the greeting to the time of day' do
-    visit '/'
-    fill_in 'Name here...', with: 'test name'
-    fill_in 'Your email here...', with: 'test@test.com'
-    click_button 'Notify me'
+  # it 'tailors the greeting to the time of day' do
+  #   visit '/'
+  #   fill_in 'Name here...', with: 'test name'
+  #   fill_in 'Your email here...', with: 'test@test.com'
+  #   click_button 'Notify me'
 
-    expect(page).to have_content 'Morning'
-  end
+  #   expect(page).to have_content 'Morning'
+  # end
 
   it 'uses only your first name in the greeting' do
     visit '/'
@@ -58,5 +58,18 @@ describe 'greeting a newly registered user' do
     expect(page).to have_content 'Test'
   end
 end
+
+
+# describe 'signup welcome email' do
+#   before do
+#     clear_emails
+#   end
+
+#   it 'is sent upon successful signup' do
+#     User.create(:user)
+#     open_email(test1@test.com)
+#     expect(current_email).to have_content 'Welcome Test'
+#   end
+# end
 
 

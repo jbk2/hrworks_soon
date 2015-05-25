@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'rspec-collection_matchers'
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -47,5 +48,12 @@ group :development, :test do
   gem 'rspec-rails'
 
   gem 'capybara'
+
+  gem "factory_girl_rails", "~> 4.0"
+
+  gem 'capybara-email'
+
+  gem 'database_cleaner'
+
 end
 
