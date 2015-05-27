@@ -1,5 +1,5 @@
 require 'rails_helper'
-require 'time'
+# require 'time'
 
 describe 'home page' do
   it "should display a 'Sign up' prompt" do
@@ -34,21 +34,20 @@ describe 'registering a user' do
 end
 
 describe 'greeting a newly registered user' do
-  # let!(:fake_hour) { '11' }
-  # before do 
-  #   allow(Time.now).to receive(:hour).and_return(fake_hour)  
-  # end
-  
-  # it 'tailors the greeting to the time of day' do
-  #   visit '/'
-  #   fill_in 'Name here...', with: 'test name'
-  #   fill_in 'Your email here...', with: 'test@test.com'
-  #   click_button 'Notify me'
+  before do 
+    Timecop.freeze(Time.now.beginning_of_day + 11.hours)
+  end
 
-  #   expect(page).to have_content 'Morning'
-  # end
+  it 'tailors the greeting to the time of day' do
+      visit '/'
+      fill_in 'Name here...', with: 'test name'
+      fill_in 'Your email here...', with: 'test@test.com'
+      click_button 'Notify me'
 
-  it 'uses only your first name in the greeting' do
+      expect(page).to have_content 'Morning'
+  end
+
+  it 'uses only your first name, capitalised, in the greeting' do
     visit '/'
     fill_in 'Name here...', with: 'test name'
     fill_in 'Your email here...', with: 'test@test.com'
@@ -60,16 +59,18 @@ describe 'greeting a newly registered user' do
 end
 
 
-# describe 'signup welcome email' do
-#   before do
-#     clear_emails
-#   end
+describe 'signup welcome email' do
+  before do
+    clear_emails
+  end
 
-#   it 'is sent upon successful signup' do
-#     User.create(:user)
-#     open_email(test1@test.com)
-#     expect(current_email).to have_content 'Welcome Test'
-#   end
-# end
+  it 'is sent upon successful signup' do
+    create(:user)
+    open_email('test1@test.com')
+    expect(current_email).to have_content 'Welcome John' 
+    expect(current_email).to_not have_content 'Doe'
+    expect(current_email.subject).to have_content 'Welcome to hrworks.io' 
+  end
+end
 
 
