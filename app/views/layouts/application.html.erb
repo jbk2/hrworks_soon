@@ -14,8 +14,9 @@
     <%= favicon_link_tag 'favicon.ico' %>
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Lato|Merriweather' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Lato|Merriweather' rel='stylesheet' type='text/css'> -->
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'> -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:00,300,400|Varela+Round' rel='stylesheet' type='text/css'>
   </head>
   
   <body>
@@ -32,12 +33,15 @@
       </div>
     </nav>
     
-    <div class="header" style="background-image: url('/assets/people.jpg')">
+    <div class="header" style="background-image: url('/assets/sky.jpg')">
       <div class="container">
         <a href="http://www.gethr.io">
           <img alt='the gethr logo' src='/assets/HRWORKS_logo.png' class='logo'>
         </a>
-        <h3 class="motto">Better benefits and hr experiences.</h3>      
+        <div class="motto">
+          <h3>Simplified HR & benefits</h3> 
+          <h4>All together, online.</h4>      
+        </div>
       </div>
 
       <%= yield %>

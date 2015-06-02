@@ -1189,7 +1189,7 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 300; /* changed from 500 to 300, so #error_explanation would be 300 */
   line-height: 1.1;
   color: inherit;
 }
