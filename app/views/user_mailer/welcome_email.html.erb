@@ -741,10 +741,15 @@ body.outlook p {
 
     .header {
       background: #E5E5E5;
+      max-height: 50px;
     }
 
     .header_logo {
       font-family: 'Varela Round', sans-serif;
+      padding: 0px 0px 10px;
+      margin: 0;
+      text-align: left; 
+      /*line-height: 1.3;*/
       color: #143462;
     }
 
@@ -831,7 +836,7 @@ body.outlook p {
                           <td>
                             <h4>Hi, <%= first_name(@user.name) %></h4>
                 						<p class="lead">Welcome and thanks for signing up to our pre-release membership list. You'll now be amongst the first to hear more about our exciting new technologies.</p>
-                						<p>Like many of you we've been working in the human resources and employee benefits industries for quite some years now, watching and playing various parts in its progress to where we all find ourselves today. Over those years we've been working hard on various projects to make the working lives of employers and employees better. It's only now however that industry and technology has reached a point that enables us to deliver the truly ground breaking solution to employee management that we've all been dreaming of for years. Behold Hrworks, the central solution for managing all things human resources and employee benefits. We're in 'stealth testing mode' at the moment so we must ask for just a little more patience from you until we reveal more just yet. <%= @user.name %> is offifically aboard though and we'll be back in touch with more for you soon.</p>
+                						<p>Like many of you we've been working in the human resources and employee benefits industries for quite some years now, watching and playing various parts in its progress to where we all find ourselves today. Over those years we've learned lots whilst working hard on various projects to make the working lives of employers and employees better. It's only now however that industry and technology has reached a point that enables us to deliver a truly ground breaking solution to employee management and one that we've all been dreaming of for years. Behold Hrworks, the central solution for managing all things human resources and employee benefits. We're in 'stealth testing mode' at the moment so we must ask for just a little more patience from you until we're able reveal more. We'll be back in touch with more for you soon.</p>
                           </td>
                           <td class="expander"></td>
                         </tr>
