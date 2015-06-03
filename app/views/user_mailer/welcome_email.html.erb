@@ -3,6 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width"/>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400|Varela+Round' rel='stylesheet' type='text/css'>
 	<style>
 /**********************************************
 * Ink v1.0.5 - Copyright 2013 ZURB Inc        *
@@ -322,7 +323,7 @@ img.center {
 
 /* Typography */
 
-body, table.body, h1, h2, h3, h4, h5, h6, p, td { 
+body, table.body, h2, h3, h4, h5, h6, p, td { 
   color: #222222;
   font-family: "Helvetica", "Arial", sans-serif; 
   font-weight: normal; 
@@ -739,7 +740,12 @@ body.outlook p {
     }
 
     .header {
-      background: #999999;
+      background: #E5E5E5;
+    }
+
+    .header_logo {
+      font-family: 'Varela Round', sans-serif;
+      color: #143462;
     }
 
     .footer .wrapper {
@@ -793,8 +799,8 @@ body.outlook p {
 
                         <table class="twelve columns">
                           <tr>
-                            <td class="six sub-columns">
-                              <img src="http://placehold.it/images/hrworks_logo.png">
+                            <td class="six sub-columns header_logo">
+                              <h1>HRWORKS</h1>
                             </td>
                             <!-- <td class="six sub-columns last" style="text-align:right; vertical-align:middle;">
                               <span class="template-label">BASIC</span>
@@ -823,9 +829,9 @@ body.outlook p {
                       <table class="twelve columns">
                         <tr>
                           <td>
-                            <h1>Hi, <%= first_name(@user.name) %></h1>
-                						<p class="lead">Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae.</p>
-                						<p>Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. consequat vel lacus. Sed iaculis pulvinar ligula, ornare fringilla ante viverra et. In hac habitasse platea dictumst. Donec vel orci mi, eu congue justo. Integer eget odio est, eget malesuada lorem. Aenean sed tellus dui, vitae viverra risus. Nullam massa sapien, pulvinar eleifend fringilla id, convallis eget nisi. Mauris a sagittis dui. Pellentesque non lacinia mi. Fusce sit amet libero sit amet erat venenatis sollicitudin vitae vel eros. Cras nunc sapien, interdum sit amet porttitor ut, congue quis urna.</p>
+                            <h4>Hi, <%= first_name(@user.name) %></h4>
+                						<p class="lead">Welcome and thanks for signing up to our pre-release membership list. You'll now be amongst the first to hear more about our exciting new technologies.</p>
+                						<p>Like many of you we've been working in the human resources and employee benefits industries for quite some years now, watching and playing various parts in its progress to where we all find ourselves today. Over those years we've been working hard on various projects to make the working lives of employers and employees better. It's only now however that industry and technology has reached a point that enables us to deliver the truly ground breaking solution to employee management that we've all been dreaming of for years. Behold Hrworks, the central solution for managing all things human resources and employee benefits. We're in 'stealth testing mode' at the moment so we must ask for just a little more patience from you until we reveal more just yet. <%= @user.name %> is offifically aboard though and we'll be back in touch with more for you soon.</p>
                           </td>
                           <td class="expander"></td>
                         </tr>
@@ -835,7 +841,7 @@ body.outlook p {
                   </tr>
                 </table>
 
-                <table class="row callout">
+                <!-- <table class="row callout">
                   <tr>
                     <td class="wrapper last">
 
@@ -850,7 +856,7 @@ body.outlook p {
 
                     </td>
                   </tr>
-                </table>
+                </table> -->
 
                 <table class="row footer">
                   <tr>
@@ -865,7 +871,7 @@ body.outlook p {
                             <table class="tiny-button facebook">
                               <tr>
                                 <td>
-                                  <a href="#">Facebook</a>
+                                  <a href="https://www.facebook.com/hrworks.co">Facebook</a>
                                 </td>
                               </tr>
                             </table>
@@ -875,17 +881,7 @@ body.outlook p {
                             <table class="tiny-button twitter">
                               <tr>
                                 <td>
-                                  <a href="#">Twitter</a>
-                                </td>
-                              </tr>
-                            </table>
-
-                            <br>
-
-                            <table class="tiny-button google-plus">
-                              <tr>
-                                <td>
-                                  <a href="#">Google +</a>
+                                  <a href="https://twitter.com/hrworksco">Twitter</a>
                                 </td>
                               </tr>
                             </table>
