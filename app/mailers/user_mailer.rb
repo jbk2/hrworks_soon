@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
   def welcome_email(user)
     @user = user
     # @url = 
-    # attachments.inline['hrworks_logo.png'] = File.read('app/assets/images/hrworks_logo.png')
+    attachments.inline['hrworks_logo.png'] = File.read('app/assets/images/hrworks_logo.png')
     mail(to: @user.email, subject: 'Welcome to Hrworks')
   end
 
