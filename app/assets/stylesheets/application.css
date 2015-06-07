@@ -106,11 +106,6 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
     margin-top: 20px;
 }
 
-.email_logo {
-    height: 80px;
-    width: 110px;
-}
-
 .motto {
     /*font-family: 'Merriweather', serif;*/
     font-family: 'Lato', sans-serif;
