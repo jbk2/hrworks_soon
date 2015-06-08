@@ -67,7 +67,7 @@ describe 'signup welcome email' do
   it 'is sent upon successful signup' do
     create(:user)
     open_email('test1@test.com')
-    expect(current_email).to have_content 'Hi John, Welcome' 
+    expect(current_email).to have_content 'Hi John,' 
     expect(current_email).to_not have_content 'Doe'
     expect(current_email.subject).to have_content 'Welcome to Hrworks' 
   end
