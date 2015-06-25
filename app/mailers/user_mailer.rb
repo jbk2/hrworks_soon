@@ -7,7 +7,7 @@ class UserMailer < ApplicationMailer
     @user = user
     # @url = 
     # attachments.inline['hrworks_v2_logo.png'] = File.read('app/assets/images/hrworks_v2_logo.png')
-    mail(to: @user.email, subject: 'Welcome to Hrworks')
+    mail(to: @user.email, subject: '☕️ Welcome to Hrworks')
   end
 
 end
