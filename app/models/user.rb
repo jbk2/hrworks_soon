@@ -6,9 +6,9 @@ class User < ActiveRecord::Base
   after_create :subscribe_user_to_mailing_list
   
 
-  def send_welcome_email
-    UserMailer.welcome_email(self).deliver_now
-  end
+  # def send_welcome_email  #Only used when using own internal mailer.
+  #   UserMailer.welcome_email(self).deliver_now
+  # end
 
   private
 

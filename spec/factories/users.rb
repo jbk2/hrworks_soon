@@ -3,6 +3,6 @@
 FactoryGirl.define do
   factory :user do
     name "John Doe"
-    email "test1@test.com"
+    email "james@bibble.com"
   end
 end

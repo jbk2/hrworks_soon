@@ -13,7 +13,7 @@ describe 'registering a user' do
     it 'confirms user registration' do
       visit '/users/new'
       fill_in 'Name here...', with: 'james kemp'
-      fill_in 'Your email here...', with: 'test2@test.com'
+      fill_in 'Your email here...', with: 'james@bibble.com'
       click_button 'Notify me'
       expect(current_path).to eq "/users/#{ User.last.id }" #or use path helper: user_path(User.last)
       expect(page).to have_content "James"
@@ -41,7 +41,7 @@ describe 'greeting a newly registered user' do
   it 'tailors the greeting to the time of day' do
       visit '/'
       fill_in 'Name here...', with: 'test name'
-      fill_in 'Your email here...', with: 'test@test.com'
+      fill_in 'Your email here...', with: 'james@bibble.com'
       click_button 'Notify me'
 
       expect(page).to have_content 'Morning'
@@ -50,7 +50,7 @@ describe 'greeting a newly registered user' do
   it 'uses only your first name, capitalised, in the greeting' do
     visit '/'
     fill_in 'Name here...', with: 'test name'
-    fill_in 'Your email here...', with: 'test@test.com'
+    fill_in 'Your email here...', with: 'james@bibble.com'
     click_button 'Notify me'
 
     expect(page).to_not have_content 'name'
@@ -66,7 +66,7 @@ describe 'signup welcome email' do
 
   it 'is sent upon successful signup' do
     create(:user)
-    open_email('test1@test.com')
+    open_email('james@bibble.com')
     expect(current_email).to have_content 'Hi John,' 
     expect(current_email).to_not have_content 'Doe'
     expect(current_email.subject).to have_content 'Welcome to Hrworks' 
