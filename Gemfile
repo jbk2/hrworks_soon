@@ -29,7 +29,7 @@ gem 'bigdecimal', '~> 1.2'
 
 gem 'rails_12factor', group: :production
 
-gem 'dotenv-rails', :groups => [:development]
+gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'gibbon'
 

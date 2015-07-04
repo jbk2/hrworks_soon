@@ -15,4 +15,7 @@ module UsersHelper
     name.split(' ')[0].capitalize
   end
 
+  def last_name(name)
+    name.split(' ')[1].capitalize
+  end
 end

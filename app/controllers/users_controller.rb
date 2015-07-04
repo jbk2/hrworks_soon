@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
 
   def create
-    @user = User.create(params[:user].permit(:name, :email))
+    @user = User.create(params[:user].permit(:name, :first_name, :last_name, :email))
 
     if @user.save
       redirect_to user_path(@user), :notice => 'You have been registered'
