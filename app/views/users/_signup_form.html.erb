@@ -18,7 +18,10 @@
   <div class="row">
     <%= form_for @user, class: "form", id: "subscribe-form", role: "form" do |u| %>
     <div class="line">
-      <%= u.text_field :name, placeholder: 'Name here...', class: 'form-control', required: true %>
+      <%= u.text_field :first_name, placeholder: 'First name...', class: 'form-control', required: true %>
+    </div>
+    <div class="line">
+      <%= u.text_field :last_name, placeholder: 'Last name...', class: 'form-control', required: true %>
     </div>
     <div class="line">
       <%= u.text_field :email, placeholder: 'Your email here...', class: 'form-control', required: true %>

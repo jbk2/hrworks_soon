@@ -12,7 +12,8 @@ describe 'registering a user' do
   context 'with valid data' do
     it 'confirms user registration' do
       visit '/users/new'
-      fill_in 'Name here...', with: 'james kemp'
+      fill_in 'First name...', with: 'james'
+      fill_in 'Last name...', with: 'kemp'
       fill_in 'Your email here...', with: 'james1@bibble.com'
       click_button 'Notify me'
       expect(current_path).to eq "/users/#{ User.last.id }" #or use path helper: user_path(User.last)
@@ -24,11 +25,12 @@ describe 'registering a user' do
   context 'with invalid data' do
     it 'without correct email' do
       visit '/'
-      fill_in 'Name here...', with: 'ja'
+      fill_in 'First name...', with: 'james'
+      fill_in 'Last name...', with: 'kemp'
       fill_in 'Your email here...', with: 'test2'
       click_button 'Notify me'
       
-      expect(page).to have_content 'errors'
+      expect(page).to have_content 'error'
     end
   end
 end
@@ -40,21 +42,12 @@ describe 'greeting a newly registered user' do
 
   it 'tailors the greeting to the time of day' do
       visit '/'
-      fill_in 'Name here...', with: 'test name'
+      fill_in 'First name...', with: 'test'
+      fill_in 'Last name...', with: 'test'
       fill_in 'Your email here...', with: 'james2@bibble.com'
       click_button 'Notify me'
 
       expect(page).to have_content 'Morning'
-  end
-
-  it 'uses only your first name, capitalised, in the greeting' do
-    visit '/'
-    fill_in 'Name here...', with: 'test name'
-    fill_in 'Your email here...', with: 'james3@bibble.com'
-    click_button 'Notify me'
-
-    expect(page).to_not have_content 'name'
-    expect(page).to have_content 'Test'
   end
 end
 
